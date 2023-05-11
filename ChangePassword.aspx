@@ -35,7 +35,7 @@ password."
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" /></td>
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /></td>
                     <td></td>
                     <td></td>
                 </tr>

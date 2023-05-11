@@ -74,9 +74,11 @@ namespace GanJian0609SkySharkWebApplication.BM
                 arrtime = Convert.ToDateTime(txtAircraftType.Text).TimeOfDay;
                 DepDateTime = Calendar1.SelectedDate.ToShortDateString() + " " + deptime.ToString();
                 ArrDateTime = Calendar2.SelectedDate.ToShortDateString() + " " + arrtime.ToString();
-                string updateSql = " INSERT INTO [dtFltDetails] ([FltNo], [Origin], [Destination], [Deptime], [Arrtime], [AircraftType],"+
-                    " [SeatsExec], [SeatsBn], [FareExec], [FareBn], [LaunchDate]) VALUES (@FltNo, @Origin, @Destination,"+
-                    " @Deptime, @Arrtime, @AircraftType, @SeatsExec, @SeatsBn, @FareExec, @FareBn, @LaunchDate)";
+                string updateSql = " INSERT INTO [dtFltDetails] ([FltNo], [Origin], [Destination], [Deptime], [Arrtime], "+
+                    "[AircraftType],"+
+                    " [SeatsExec], [SeatsBn], [FareExec], [FareBn], [LaunchDate]) "+
+                    "VALUES (@FltNo, @Origin, @Destination,@Deptime, @Arrtime, @AircraftType,"+ 
+                    "@SeatsExec, @SeatsBn, @FareExec, @FareBn, @LaunchDate)";
                 SqlCommand cmd2 = new SqlCommand(updateSql, conn);
                 cmd2.Parameters.AddWithValue("@FltNo", txtFlightNumber.Text.Trim());
                 cmd2.Parameters.AddWithValue("@Origin", txtOriginPlace.Text.Trim());

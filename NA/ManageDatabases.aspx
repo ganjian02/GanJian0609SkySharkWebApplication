@@ -20,26 +20,30 @@
                         <asp:Label ID="label1" runat="server" Text="Manage Database"></asp:Label></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr><td></td>
                     <td >
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="../ChangePassword.aspx">Change Password</asp:HyperLink></td>
                     <td >
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="../Logoff.aspx">Logoff</asp:HyperLink></td>
+                    <td></td>
                 </tr>
-                <tr>
-                    <td></td><td></td><td></td><td></td>
+                <tr>    
+                    <td colspan="2">
+                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td></td><td></td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <asp:Button ID="btnArchive" runat="server" Text="Archive information pertaining to flights that have departed."
-                            BorderColor="Blue" BackColor="Silver"  /></td>
+                            BorderColor="Blue" BackColor="Silver" OnClick="btnArchive_Click" /></td>
                 </tr>
                 <tr>
                     <td></td><td></td><td></td><td></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Button ID="btnUpdate" runat="server" Text="Update customer information for the frequent fliers program." BorderColor="Blue" BackColor="Silver" /></td>
+                        <asp:Button ID="btnUpdate" runat="server" Text="Update customer information for the frequent fliers program." BorderColor="Blue" BackColor="Silver" OnClick="btnUpdate_Click" /></td>
                 </tr>
                 </table>
             </div>

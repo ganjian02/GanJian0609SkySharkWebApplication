@@ -11,7 +11,7 @@ namespace GanJian0609SkySharkWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.RemoveAll();
         }
     }
 }
